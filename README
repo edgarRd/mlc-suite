@@ -1,0 +1,50 @@
+# ##################################### #
+# ITESM Campus Monterrey / SBC          #
+# Edgar Hernan Rodriguez Diaz  790543   #
+# Ivan Gonzalez  791688                 #
+# ##################################### #
+
+README FILE
+
+Este directorio contiene los archivos que se usaron para la implementacion 
+de los algoritmos de clasificacion en python correspondientes al proyecto de SBC.
+
+A continuacion se describen cada uno de los archivos contenidos.
+
+- algorithms (paquete)
+  Contiene los archivos de implementacion del proyecto.
+  - a1R.py <- Implementacion del algoritmo 1R
+  - StatisticalModeling.py <- Implementacion del algoritmo de modelacion estadistica.
+  - Rules.py <- Implementacion del algoritmo de clasificacion por reglas.
+  - DecisionTree.py <- Implementacion del algoritmo de arboles de decision.
+  
+- read_arff.py
+  Archivo que implementa el lector de archivos ARFF, descargado de: 
+  http://salieri.mty.itesm.mx/sbc/python/
+  NOTA: Se modifico agregando un metodo para separar las instancias del archivo
+  y asi poder destinar n instancias para entrenamiento del algoritmo y m instancias
+  para predecir.
+  
+- sbc-suite.py
+  Programa en python que hace uso de los algoritmos y lo aplica a los archivo de datos 
+  que se pasa como parametro. Recibe como parametro la ruta del archivo *.arff a
+  procesar.
+  NOTA: Como Ejecutar!!! -----------------------------------------------------------------
+  
+  You need to specify the path of the file as: python sbc-suite.py <option> <filename>
+      where <option>:
+      -1R runs 1R algorithm
+      -SM runs Statistical modeling algorithm
+      -rules1 runs Rule classification with P/t
+      -rules2 runs Rule classification with p(log P/t - log P/T)
+      -DT creates the corresponding decision tree (only for nominal values and no missing values)
+
+  Ejemplo:
+      python sbc-suite.py -DT test_files/weather.nominal.arff
+  ----------------------------------------------------------------------------------------
+
+- test_files/
+  Directorio que contiene los archivos de prueba.
+  
+- README
+  Este archivo
