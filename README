@@ -6,30 +6,28 @@
 
 README FILE
 
-Este directorio contiene los archivos que se usaron para la implementacion 
-de los algoritmos de clasificacion en python correspondientes al proyecto de SBC.
+This directory contains the project files that implement some clustering algorithms 
+written in python.
 
-A continuacion se describen cada uno de los archivos contenidos.
+The following information describes each one of the files contained.
 
 - algorithms (paquete)
-  Contiene los archivos de implementacion del proyecto.
-  - a1R.py <- Implementacion del algoritmo 1R
-  - StatisticalModeling.py <- Implementacion del algoritmo de modelacion estadistica.
-  - Rules.py <- Implementacion del algoritmo de clasificacion por reglas.
-  - DecisionTree.py <- Implementacion del algoritmo de arboles de decision.
+  Contains the python code for the implementation of the algorithms.
+  - a1R.py <- Implementation of the 1R algorithm.
+  - StatisticalModeling.py <- Implementation of the Statistical Modeling algorithm.
+  - Rules.py <- Implementation of the Rule Clustering Algorithm
+  - DecisionTree.py <- Implementation of the Decision Tree algorithm.
   
 - read_arff.py
-  Archivo que implementa el lector de archivos ARFF, descargado de: 
+  This file is an ARFF file reader, downloaded from: 
   http://salieri.mty.itesm.mx/sbc/python/
-  NOTA: Se modifico agregando un metodo para separar las instancias del archivo
-  y asi poder destinar n instancias para entrenamiento del algoritmo y m instancias
-  para predecir.
   
 - sbc-suite.py
+  Python program that uses the implemented algorithms and applies them to the data files
+  received as parameters. It receives the *.arff file path as a parameter.
   Programa en python que hace uso de los algoritmos y lo aplica a los archivo de datos 
-  que se pasa como parametro. Recibe como parametro la ruta del archivo *.arff a
-  procesar.
-  NOTA: Como Ejecutar!!! -----------------------------------------------------------------
+  
+  How to Execute!!! -----------------------------------------------------------------
   
   You need to specify the path of the file as: python sbc-suite.py <option> <filename>
       where <option>:
@@ -39,12 +37,12 @@ A continuacion se describen cada uno de los archivos contenidos.
       -rules2 runs Rule classification with p(log P/t - log P/T)
       -DT creates the corresponding decision tree (only for nominal values and no missing values)
 
-  Ejemplo:
+  E.g.:
       python sbc-suite.py -DT test_files/weather.nominal.arff
   ----------------------------------------------------------------------------------------
 
 - test_files/
-  Directorio que contiene los archivos de prueba.
+  This directory contains the ARFF data files for testing.
   
 - README
-  Este archivo
+  This file
